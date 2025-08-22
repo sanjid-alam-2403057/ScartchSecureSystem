@@ -1,47 +1,46 @@
 
 
-```markdown
 # 🎫 ScratchSecure System (C Language)
 
-A telecom recharge scratch card management system written in **C**.  
+A **telecom recharge scratch card management system** written in **C**.  
 It handles **card generation, user authentication, transaction tracking, statistics, and administrative functions** in a secure way.
 
 ---
 
 ## ✨ Features
-- 🔐 Role-based authentication (Admin/User)
-- 🎫 Scratch card generation, deletion, and management
-- 📱 User account management with balance tracking
-- 🔒 Security features with account lockout system
-- 📊 Detailed sales statistics and reporting
-- 📝 Transaction history tracking
-- 👥 User registration and login system
-- 🔍 Search transactions by mobile number
-- 💾 Persistent storage (data is saved in text files across sessions)
+- 🔐 **Role-based authentication (Admin/User)**
+- 🎫 **Scratch card generation, deletion, and management**
+- 📱 **User account management with balance tracking**
+- 🔒 **Security features with account lockout system**
+- 📊 **Detailed sales statistics and reporting**
+- 📝 **Transaction history tracking**
+- 👥 **User registration and login system**
+- 🔍 **Search transactions by mobile number**
+- 💾 **Persistent storage (data is saved in text files across sessions)**
 
 ---
 
 ## 🖥 Menu Structure
 
-### Admin Menu Options
+## Admin Menu Options
 | Option | Description |
 |--------|-------------|
-| 1 | Create new scratch cards |
-| 2 | Delete existing card |
-| 3 | Unlock locked user accounts |
-| 4 | View recharge history |
-| 5 | Display sales statistics |
-| 6 | Search transaction by mobile number |
-| 7 | Exit program |
-| 8 | Show all available cards |
-| 9 | Search for specific card |
-| 10 | Return to main menu |
+| **1** | Create new scratch cards |
+| **2** | Delete existing card |
+| **3** | Unlock locked user accounts |
+| **4** | View recharge history |
+| **5** | Display sales statistics |
+| **6** | Search transaction by mobile number |
+| **7** | Exit program |
+| **8** | Show all available cards |
+| **9** | Search for specific card |
+| **10** | Return to main menu |
 
-### User Menu Options
+## User Menu Options
 | Option | Description |
 |--------|-------------|
-| 1 | Sign in to existing account |
-| 2 | Create new account |
+| **1** | Sign in to existing account |
+| **2** | Create new account |
 |   | Recharge with scratch card after login |
 
 ---
@@ -114,7 +113,7 @@ Enter Option:
 
 ## 📌 Notes
 
-* Data is **persistently stored** in text files and restored on next execution
+* **Data is persistently stored** in text files and restored on next execution
 * Uses **dynamic memory allocation** with safe reallocation
 * Scratch card numbers are generated **randomly and uniquely**
 * **Account lockout** occurs after multiple failed attempts
@@ -147,8 +146,4 @@ This project is licensed under the **MIT License** — you are free to use, modi
 📧 \[[sanjid01313@gmail.com](mailto:sanjid01313@gmail.com)]
 🌐 \[[https://github.com/sanjid-alam-2403057](https://github.com/sanjid-alam-2403057)]
 
-```
 
----
-
-```
