@@ -1,19 +1,25 @@
 
+
 ```markdown
 # 🎫 ScratchSecure System (C Language)
 
-A comprehensive scratch card management system written in C that handles card distribution, user authentication, transaction tracking, and administrative functions for a telecom recharge system.
+A telecom recharge scratch card management system written in **C**.  
+It handles **card generation, user authentication, transaction tracking, statistics, and administrative functions** in a secure way.
+
+---
 
 ## ✨ Features
 - 🔐 Role-based authentication (Admin/User)
-- 🎫 Scratch card generation and management
+- 🎫 Scratch card generation, deletion, and management
 - 📱 User account management with balance tracking
-- 🔒 Security features with user lockout system
+- 🔒 Security features with account lockout system
 - 📊 Detailed sales statistics and reporting
-- 📝 Complete transaction history
+- 📝 Transaction history tracking
 - 👥 User registration and login system
-- 🔍 Search functionality for transactions
-- 💾 Persistent data storage across sessions
+- 🔍 Search transactions by mobile number
+- 💾 Persistent storage (data is saved in text files across sessions)
+
+---
 
 ## 🖥 Menu Structure
 
@@ -21,11 +27,11 @@ A comprehensive scratch card management system written in C that handles card di
 | Option | Description |
 |--------|-------------|
 | 1 | Create new scratch cards |
-| 2 | Delete existing cards |
+| 2 | Delete existing card |
 | 3 | Unlock locked user accounts |
-| 4 | View transaction history |
+| 4 | View recharge history |
 | 5 | Display sales statistics |
-| 6 | Search transactions |
+| 6 | Search transaction by mobile number |
 | 7 | Exit program |
 | 8 | Show all available cards |
 | 9 | Search for specific card |
@@ -36,46 +42,61 @@ A comprehensive scratch card management system written in C that handles card di
 |--------|-------------|
 | 1 | Sign in to existing account |
 | 2 | Create new account |
-| 3 | Recharge using scratch card |
+|   | Recharge with scratch card after login |
+
+---
 
 ## 📂 File Structure
 ```
+
 scratchsecure/
-│── scratch_management.c    # Main source code
+│── scratch\_management.c    # Main source code
 │── cards.txt               # Scratch card database
-│── customer.txt            # User account information
-│── locked_users.txt        # Locked user accounts
+│── users.txt               # User account balances
+│── locked.txt              # Locked user accounts
 │── history.txt             # Transaction history
 │── Statistics.txt          # Sales statistics
-│── password_manager.txt    # User credentials
+│── password.txt            # User credentials
 │── README.md               # Project documentation
-```
+
+````
+
+---
 
 ## ⚙️ How to Compile & Run
 
-**On Windows (Code::Blocks / Dev-C++ / MinGW)**
+**On Windows (MinGW / Dev-C++ / Code::Blocks):**
 ```bash
 gcc scratch_management.c -o scratchsecure.exe
 scratchsecure.exe
-```
+````
 
-**On Linux (GCC)**
+**On Linux (GCC):**
+
 ```bash
 gcc scratch_management.c -o scratchsecure
 ./scratchsecure
 ```
 
+---
+
 ## 🔐 Login System
 
-**Admin Access:**
-- Default password: `admin123`
-- Password is required for administrative functions
+**Admin Access**
 
-**User Access:**
-- Users can create accounts or sign in with existing credentials
-- Accounts are protected with username/password authentication
+* Default password: `admin123`
+* Required for performing administrative functions
+
+**User Access**
+
+* Users can sign up with username/password
+* Login is required before recharging with a scratch card
+* Accounts are protected with lockout system after failed attempts
+
+---
 
 ## 📊 Example Output
+
 ```
 ==================================
 ||      ScratchSecure System    ||
@@ -89,24 +110,45 @@ gcc scratch_management.c -o scratchsecure
 Enter Option: 
 ```
 
+---
+
 ## 📌 Notes
-- Data is persistently stored in text files and maintained between sessions
-- Uses dynamic memory allocation with safe reallocation practices
-- Includes security features like account lockout after failed attempts
-- Generates random card numbers with validation to prevent duplicates
-- Tracks comprehensive statistics including cards sold, remaining inventory, and revenue
+
+* Data is **persistently stored** in text files and restored on next execution
+* Uses **dynamic memory allocation** with safe reallocation
+* Scratch card numbers are generated **randomly and uniquely**
+* **Account lockout** occurs after multiple failed attempts
+* Keeps track of:
+
+  * Cards sold
+  * Cards remaining
+  * Total revenue generated
+
+---
 
 ## 🛡️ Security Features
-- Password protection for admin functions
-- User account system with secure credential storage
-- Account lockout after multiple failed card redemption attempts
-- Input validation throughout the system
+
+* Password-protected **Admin functions**
+* User account system with credential storage
+* Account lockout for invalid recharge attempts
+* Input validation throughout the program
+
+---
 
 ## 📜 License
-This project is licensed under the MIT License — you are free to use, modify, and distribute it.
+
+This project is licensed under the **MIT License** — you are free to use, modify, and distribute it.
+
+---
 
 ## 👨‍💻 Author
-**Sanjid Alam Shadhin**  
-📧 [sanjid01313@gmail.com]  
-🌐 [https://github.com/sanjid-alam-2403057]
+
+**Sanjid Alam Shadhin**
+📧 \[[sanjid01313@gmail.com](mailto:sanjid01313@gmail.com)]
+🌐 \[[https://github.com/sanjid-alam-2403057](https://github.com/sanjid-alam-2403057)]
+
+```
+
+---
+
 ```
