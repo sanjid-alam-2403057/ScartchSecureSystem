@@ -1,128 +1,112 @@
 
-
----
-
 ```markdown
-# ScratchSecure System
+# 🎫 ScratchSecure System (C Language)
 
-ScratchSecure System is a C-based program for managing scratch cards, mobile recharges, user accounts, and administrative operations. It is designed to simulate a prepaid recharge system with features like **card generation, user sign-in/sign-up, recharge history, statistics, account locking/unlocking, and persistent file storage**.
+A comprehensive scratch card management system written in C that handles card distribution, user authentication, transaction tracking, and administrative functions for a telecom recharge system.
 
----
+## ✨ Features
+- 🔐 Role-based authentication (Admin/User)
+- 🎫 Scratch card generation and management
+- 📱 User account management with balance tracking
+- 🔒 Security features with user lockout system
+- 📊 Detailed sales statistics and reporting
+- 📝 Complete transaction history
+- 👥 User registration and login system
+- 🔍 Search functionality for transactions
+- 💾 Persistent data storage across sessions
 
-## 📌 Features
+## 🖥 Menu Structure
 
-### 👨‍💼 Admin
-- Login with admin password (`admin123` by default).
-- Add new recharge cards (40, 60, 100 minutes, or custom).
-- Delete cards.
-- Unlock locked users.
-- View recharge history.
-- Check system statistics (sold cards, remaining cards, total revenue).
-- Search by mobile number or specific card number.
-- View all available cards.
+### Admin Menu Options
+| Option | Description |
+|--------|-------------|
+| 1 | Create new scratch cards |
+| 2 | Delete existing cards |
+| 3 | Unlock locked user accounts |
+| 4 | View transaction history |
+| 5 | Display sales statistics |
+| 6 | Search transactions |
+| 7 | Exit program |
+| 8 | Show all available cards |
+| 9 | Search for specific card |
+| 10 | Return to main menu |
 
-### 👤 User
-- Sign Up with username & password.
-- Sign In with existing credentials.
-- Recharge balance using scratch card numbers.
-- Maintain individual balance.
-- Mobile numbers automatically locked after **3 wrong attempts**.
+### User Menu Options
+| Option | Description |
+|--------|-------------|
+| 1 | Sign in to existing account |
+| 2 | Create new account |
+| 3 | Recharge using scratch card |
 
-### 📂 File Management
-The system automatically stores and loads data from:
-- `cards.txt` → Stores available scratch cards.
-- `users.txt` → Stores user balances.
-- `locked.txt` → Stores locked mobile numbers.
-- `history.txt` → Stores recharge transaction history.
-- `Statistics.txt` → Stores sales & revenue statistics.
-- `password.txt` → Stores registered usernames & passwords.
-
----
-
-## ⚙️ How It Works
-
-1. **Startup**  
-   - Loads existing data from text files.  
-   - If no data exists, generates default sets of cards.
-
-2. **Main Menu**  
-   - Choose **Admin**, **User**, or **Exit**.  
-
-3. **Admin Login**  
-   - Enter password to access admin operations.  
-
-4. **User Login / Signup**  
-   - Create a new account or login with username & password.  
-   - Recharge by entering mobile number & scratch card number.  
-
-5. **Locking System**  
-   - A mobile number is locked after 3 wrong card attempts.  
-   - Admin can unlock locked numbers.  
-
-6. **Exit**  
-   - On exit, all changes are saved to files.  
-
----
-
-## 🗂️ Project Structure
-
+## 📂 File Structure
+```
+scratchsecure/
+│── scratch_management.c    # Main source code
+│── cards.txt               # Scratch card database
+│── customer.txt            # User account information
+│── locked_users.txt        # Locked user accounts
+│── history.txt             # Transaction history
+│── Statistics.txt          # Sales statistics
+│── password_manager.txt    # User credentials
+│── README.md               # Project documentation
 ```
 
-ScratchSecure/
-│
-├── main.c             # Core source code
-├── cards.txt          # Scratch card database
-├── users.txt          # User balances
-├── locked.txt         # Locked mobile numbers
-├── history.txt        # Recharge history
-├── Statistics.txt     # Sales and statistics
-└── password.txt       # User credentials
+## ⚙️ How to Compile & Run
 
-````
-
----
-
-## 🚀 Compilation & Execution
-
-### Compile:
+**On Windows (Code::Blocks / Dev-C++ / MinGW)**
 ```bash
-gcc main.c -o scratchsecure
-````
+gcc scratch_management.c -o scratchsecure.exe
+scratchsecure.exe
+```
 
-### Run:
-
+**On Linux (GCC)**
 ```bash
+gcc scratch_management.c -o scratchsecure
 ./scratchsecure
 ```
 
----
+## 🔐 Login System
 
-## 🔑 Default Credentials
+**Admin Access:**
+- Default password: `admin123`
+- Password is required for administrative functions
 
-* **Admin Password**: `admin123`
-* **User**: Must register first via Sign Up option.
+**User Access:**
+- Users can create accounts or sign in with existing credentials
+- Accounts are protected with username/password authentication
 
----
+## 📊 Example Output
+```
+==================================
+||      ScratchSecure System    ||
+||      Developed by: SANJID    ||
+==================================
 
-## 📊 Example Workflow
-
-1. Run the program → Main Menu.
-2. As Admin → Add 10 cards of 40 minutes each.
-3. As User → Sign Up (`username: test, password: 1234`).
-4. Enter mobile number & scratch card → Balance recharged.
-5. Check statistics → Revenue & remaining cards updated.
-6. On exit → All data stored in `.txt` files.
-
----
-
-## 🛠️ Author
-
-**Developed by:** *Sanjid Alam*
-Department of CSE, RUET
-
----
-
+*****Main Menu*****
+1. Admin
+2. User
+3. Exit
+Enter Option: 
 ```
 
----
+## 📌 Notes
+- Data is persistently stored in text files and maintained between sessions
+- Uses dynamic memory allocation with safe reallocation practices
+- Includes security features like account lockout after failed attempts
+- Generates random card numbers with validation to prevent duplicates
+- Tracks comprehensive statistics including cards sold, remaining inventory, and revenue
 
+## 🛡️ Security Features
+- Password protection for admin functions
+- User account system with secure credential storage
+- Account lockout after multiple failed card redemption attempts
+- Input validation throughout the system
+
+## 📜 License
+This project is licensed under the MIT License — you are free to use, modify, and distribute it.
+
+## 👨‍💻 Author
+**Sanjid Alam Shadhin**  
+📧 [sanjid01313@gmail.com]  
+🌐 [https://github.com/sanjid-alam-2403057]
+```
